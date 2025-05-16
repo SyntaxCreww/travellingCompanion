@@ -1,8 +1,5 @@
-"use client"; // Add this at the very top
-
 import Image from "next/image";
 import Button from "./Button";
-import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
@@ -10,39 +7,19 @@ const Hero = () => {
       <div className="hero-map" />
 
       <div className="relative z-20 flex flex-1 flex-col xl:w-1/2">
-        <motion.div
-          initial={{ y: -20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.5 }}
-        >
-          <Image
-            src="/camp.svg"
-            alt="camp"
-            width={50}
-            height={50}
-            className="absolute left-[-5px] top-[-30px] w-10 lg:w-[50px]"
-          />
-        </motion.div>
-
-        <motion.h1
-          className="bold-52 lg:bold-88"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.2 }}
-        >
-          Shivapuri Camping Area Kathmandu
-        </motion.h1>
-
-        <motion.p
-          className="regular-16 mt-6 text-gray-30 xl:max-w-[520px]"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.4 }}
-        >
+        <Image
+          src="/camp.svg"
+          alt="camp"
+          width={50}
+          height={50}
+          className="absolute left-[-5px] top-[-30px] w-10 lg:w-[50px]"
+        />
+        <h1 className="bold-52 lg:bold-88">Shivapuri Camping Area Kathmandu</h1>
+        <p className="regular-16 mt-6 text-gray-30 xl:max-w-[520px]">
           We want to be on each of your journeys seeking the satisfaction of
           seeing the incorruptible beauty of nature. We can help you on an
           adventure around the world in just one app
-        </motion.p>
+        </p>
 
         <div className="my-11 flex flex-wrap gap-5">
           <div className="flex items-center gap-2">
@@ -79,12 +56,7 @@ const Hero = () => {
       </div>
 
       <div className="relative flex flex-1 items-start">
-        <motion.div
-          className="relative z-20 flex w-[268px] flex-col gap-8 rounded-3xl bg-green-90 px-7 py-8"
-          initial={{ x: 50, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ delay: 0.6 }}
-        >
+        <div className="relative z-20 flex w-[268px] flex-col gap-8 rounded-3xl bg-green-90 px-7 py-8">
           <div className="flex flex-col">
             <div className="flexBetween">
               <p className="regular-16 text-gray-20">Location</p>
@@ -103,7 +75,7 @@ const Hero = () => {
               <p className="bold-20 text-white">2.040 km</p>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
